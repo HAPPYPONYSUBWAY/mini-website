@@ -3,19 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Epic Mini Website</title>
+    <title>My Legendary Website</title>
     <style>
         body {
             margin: 0;
             padding: 0;
             height: 100vh;
-            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+            background: linear-gradient(135deg, #1d2b64, #f8cdda);
             display: flex;
             justify-content: center;
             align-items: center;
             font-family: 'Poppins', sans-serif;
             color: #fff;
             text-align: center;
+            overflow: hidden;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+            animation: float 6s ease-in-out infinite;
         }
 
         h1 {
@@ -25,13 +35,36 @@
 
         p {
             font-size: 1.2rem;
-            max-width: 600px;
-            padding: 0 20px;
+            margin-bottom: 1.5em;
+        }
+
+        a.button {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #ff7eb3;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        a.button:hover {
+            background: #ff65a3;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
         }
 
         @media (max-width: 600px) {
             h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
             p {
                 font-size: 1rem;
@@ -40,9 +73,10 @@
     </style>
 </head>
 <body>
-    <div>
-        <h1>Welcome to My Epic Website 🚀</h1>
-        <p>This is a clean and simple website, built with love and dreams! ✨</p>
+    <div class="card">
+        <h1>Welcome to the Legendary Zone 🚀</h1>
+        <p>Dream big. Build bigger. This is just the beginning. ✨</p>
+        <a href="#!" class="button">Join the Adventure</a>
     </div>
 </body>
 </html>
