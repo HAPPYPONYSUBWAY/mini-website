@@ -15,11 +15,18 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<audio id="backgroundMusic" loop autoplay>
+  <source src="https://cdn.pixabay.com/download/audio/2022/11/21/audio_6fc04fc841.mp3?filename=ethereal-space-ambient-12525.mp3" type="audio/mp3">
+</audio>
 
   <!-- Animated Stars Background -->
   <div id="stars"></div>
   <div id="stars2"></div>
   <div id="stars3"></div>
+  
+<button id="darkModeToggle" style="position: fixed; top: 20px; right: 20px;">Light Mode</button>
+<button id="muteButton" style="position: fixed; top: 70px; right: 20px;">Mute</button>
+<p id="memberCounter" style="margin-top: 30px;">Members joined: <span id="members">1024</span></p>
 
   <header data-aos="fade-down">Danny Loves Zach 🚀</header>
 
@@ -42,6 +49,43 @@
 
   <!-- Stars JS -->
   <script src="js/stars.js"></script>
+<script>
+// Dark Mode Switch
+const toggle = document.getElementById('darkModeToggle');
+toggle.addEventListener('click', () => {
+  document.body.classList.toggle('light-mode');
+  if (document.body.classList.contains('light-mode')) {
+    toggle.innerText = "Dark Mode";
+    toggle.style.background = "#000";
+    toggle.style.color = "#fff";
+  } else {
+    toggle.innerText = "Light Mode";
+    toggle.style.background = "#fff";
+    toggle.style.color = "#000";
+  }
+});
+
+// Mute/Unmute Music
+const music = document.getElementById('backgroundMusic');
+const muteBtn = document.getElementById('muteButton');
+
+muteBtn.addEventListener('click', () => {
+  if (music.muted) {
+    music.muted = false;
+    muteBtn.innerText = "Mute";
+  } else {
+    music.muted = true;
+    muteBtn.innerText = "Unmute";
+  }
+});
+
+// Members Counter
+let members = 1024;
+setInterval(() => {
+  members += Math.floor(Math.random() * 3);
+  document.getElementById('members').innerText = members;
+}, 4000);
+</script>
 
 </body>
 </html>
