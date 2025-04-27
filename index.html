@@ -4,10 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Danny Loves Zach - Official Site</title>
+  
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
+    
     body, html {
       height: 100%;
       font-family: 'Poppins', sans-serif;
@@ -25,17 +31,16 @@
     header {
       font-family: 'Orbitron', sans-serif;
       font-size: 2rem;
+      margin-bottom: 20px;
       background: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 20px;
     }
 
     h1 {
       font-size: 4rem;
       margin-bottom: 20px;
-      animation: fadeIn 2s ease-in-out;
     }
 
     p {
@@ -46,8 +51,8 @@
 
     .buttons {
       display: flex;
-      gap: 20px;
       flex-wrap: wrap;
+      gap: 20px;
       justify-content: center;
     }
 
@@ -60,33 +65,36 @@
       text-decoration: none;
       font-weight: bold;
       font-size: 1.2rem;
-      transition: transform 0.3s, background 0.3s;
+      transition: 0.3s;
     }
 
     a.button:hover {
-      transform: scale(1.1);
       background: linear-gradient(to right, #fc466b, #3f5efb);
-    }
-
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(-20px); }
-      100% { opacity: 1; transform: translateY(0); }
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #fc466b;
     }
   </style>
 </head>
 <body>
 
-  <header>Danny Loves Zach 🚀</header>
+  <header data-aos="fade-down">Danny Loves Zach 🚀</header>
 
-  <h1>The Future of Love 💖</h1>
-  <p>A story so powerful, it became a revolution.</p>
+  <h1 data-aos="fade-up">The Future of Love 💖</h1>
+  <p data-aos="fade-up" data-aos-delay="200">A story so powerful, it became a revolution.</p>
 
-  <div class="buttons">
+  <div class="buttons" data-aos="zoom-in" data-aos-delay="400">
     <a href="about.html" class="button">About</a>
     <a href="team.html" class="button">Meet the Team</a>
     <a href="join.html" class="button">Join Us</a>
     <a href="contact.html" class="button">Contact</a>
+    <a href="vip.html" class="button">Founders Only</a>
   </div>
+
+  <!-- AOS Library JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 </body>
 </html>
