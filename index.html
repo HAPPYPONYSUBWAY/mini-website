@@ -3,79 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Danny Loves Zach - Official Site</title>
-  
+  <title>Danny Loves Zach - Home</title>
+
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Orbitron:wght@700&display=swap" rel="stylesheet">
-  
-  <!-- AOS Animation CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+  <!-- AOS Animations -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    
-    body, html {
-      height: 100%;
-      font-family: 'Poppins', sans-serif;
-      background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      overflow-x: hidden;
-      padding: 20px;
-    }
-
-    header {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 2rem;
-      margin-bottom: 20px;
-      background: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    h1 {
-      font-size: 4rem;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 1.5rem;
-      margin-bottom: 40px;
-      opacity: 0.85;
-    }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    a.button {
-      padding: 15px 30px;
-      background: #fc466b;
-      background: linear-gradient(to right, #3f5efb, #fc466b);
-      color: white;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.2rem;
-      transition: 0.3s;
-    }
-
-    a.button:hover {
-      background: linear-gradient(to right, #fc466b, #3f5efb);
-      transform: scale(1.1);
-      box-shadow: 0 0 20px #fc466b;
-    }
-  </style>
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- Animated Stars Background -->
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
 
   <header data-aos="fade-down">Danny Loves Zach 🚀</header>
 
@@ -90,11 +34,15 @@
     <a href="vip.html" class="button">Founders Only</a>
   </div>
 
-  <!-- AOS Library JS -->
+  <!-- AOS Library -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
 
+  <!-- Stars JS -->
+  <script src="js/stars.js"></script>
+
 </body>
 </html>
+
