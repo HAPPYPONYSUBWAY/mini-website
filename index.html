@@ -3,89 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Danny Loves Zach - Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <title>Danny Loves Zach - Official Site</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Orbitron:wght@700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body, html {
       height: 100%;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
       color: #fff;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       text-align: center;
-      overflow: hidden;
+      overflow-x: hidden;
+      padding: 20px;
     }
 
-    .logo {
+    header {
+      font-family: 'Orbitron', sans-serif;
       font-size: 2rem;
-      margin-bottom: 10px;
-      font-weight: bold;
-      letter-spacing: 1px;
-      background: linear-gradient(45deg, #ff4b2b, #ff416c);
+      background: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
     }
 
     h1 {
       font-size: 4rem;
       margin-bottom: 20px;
-      animation: fadeIn 2s ease;
+      animation: fadeIn 2s ease-in-out;
     }
 
     p {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       margin-bottom: 40px;
-      opacity: 0.8;
-      animation: fadeIn 2s ease;
+      opacity: 0.85;
     }
 
     .buttons {
       display: flex;
-      flex-wrap: wrap;
       gap: 20px;
+      flex-wrap: wrap;
       justify-content: center;
     }
 
     a.button {
       padding: 15px 30px;
-      background: #ff4b2b;
-      border-radius: 50px;
-      text-decoration: none;
+      background: #fc466b;
+      background: linear-gradient(to right, #3f5efb, #fc466b);
       color: white;
+      border-radius: 30px;
+      text-decoration: none;
       font-weight: bold;
-      font-size: 1.1rem;
-      transition: 0.3s;
+      font-size: 1.2rem;
+      transition: transform 0.3s, background 0.3s;
     }
 
     a.button:hover {
-      background: #ff416c;
-      transform: scale(1.05);
-      box-shadow: 0 0 15px #ff416c;
+      transform: scale(1.1);
+      background: linear-gradient(to right, #fc466b, #3f5efb);
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
 
-  <div class="logo">Danny Loves Zach 🚀</div>
+  <header>Danny Loves Zach 🚀</header>
+
   <h1>The Future of Love 💖</h1>
-  <p>A Story. A Startup. A Revolution.</p>
+  <p>A story so powerful, it became a revolution.</p>
 
   <div class="buttons">
-    <a href="about.html" class="button">About Us</a>
-    <a href="join.html" class="button">Get Started</a>
-    <a href="https://forms.gle/yourGoogleFormLinkHere" class="button" target="_blank">Sign Up Form</a>
-    <a href="https://happyponysubway.github.io/mini-website/contact.html" class="button">Contact</a>
+    <a href="about.html" class="button">About</a>
+    <a href="team.html" class="button">Meet the Team</a>
+    <a href="join.html" class="button">Join Us</a>
+    <a href="contact.html" class="button">Contact</a>
   </div>
 
 </body>
