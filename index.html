@@ -1,125 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legendary Website</title>
-    <style>
-        /* Basic Setup */
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: 'Poppins', sans-serif;
-            overflow: hidden;
-            background: linear-gradient(135deg, #000428, #004e92);
-            color: white;
-            text-align: center;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Danny Loves Zach 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <style>
+    /* Setup */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        /* Particle background */
-        .stars {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: transparent;
-            box-shadow: 
-                100px 200px white,
-                150px 300px white,
-                300px 400px white,
-                500px 600px white,
-                700px 800px white,
-                900px 100px white,
-                1200px 400px white,
-                1300px 300px white,
-                1400px 600px white,
-                1600px 500px white;
-            animation: moveStars 100s linear infinite;
-            z-index: 0;
-        }
+    body, html {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+      background: radial-gradient(circle at center, #1b2735, #090a0f);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
 
-        @keyframes moveStars {
-            0% { transform: translateY(0px); }
-            100% { transform: translateY(-2000px); }
-        }
+    /* Star Animation */
+    .stars, .stars2, .stars3 {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      background-repeat: repeat;
+      animation: moveStars 100s linear infinite;
+      pointer-events: none;
+    }
 
-        /* Card Styling */
-        .card {
-            position: relative;
-            z-index: 1;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 40px 30px;
-            border-radius: 20px;
-            backdrop-filter: blur(15px);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-            margin: auto;
-            margin-top: 10vh;
-            width: 90%;
-            max-width: 600px;
-            animation: float 6s ease-in-out infinite;
-        }
+    .stars {
+      background-image: url('https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/media/star.png');
+      background-size: 50px;
+    }
 
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5em;
-        }
+    .stars2 {
+      background-image: url('https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/media/star.png');
+      background-size: 30px;
+      animation-duration: 200s;
+    }
 
-        p {
-            font-size: 1.2rem;
-            margin-bottom: 1.5em;
-        }
+    .stars3 {
+      background-image: url('https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/media/star.png');
+      background-size: 15px;
+      animation-duration: 300s;
+    }
 
-        a.button {
-            display: inline-block;
-            padding: 12px 30px;
-            background: #ff416c;
-            background: linear-gradient(to right, #ff4b2b, #ff416c);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: box-shadow 0.3s ease, transform 0.3s ease;
-        }
+    @keyframes moveStars {
+      from { transform: translateY(0); }
+      to { transform: translateY(-2000px); }
+    }
 
-        a.button:hover {
-            box-shadow: 0 0 20px #ff4b2b, 0 0 30px #ff416c;
-            transform: scale(1.05);
-        }
+    /* Main Text */
+    .center-text {
+      z-index: 5;
+      text-align: center;
+      padding: 20px;
+      animation: fadeIn 3s ease-in-out forwards;
+    }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
+    .center-text h1 {
+      font-size: 4rem;
+      color: #ff4b2b;
+      background: linear-gradient(45deg, #ff416c, #ff4b2b, #ff416c);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 10px #ff416c66, 0 0 20px #ff4b2b66;
+      animation: pulse 3s infinite;
+    }
 
-        /* Hidden Secret */
-        .secret {
-            position: absolute;
-            bottom: 5px;
-            right: 10px;
-            font-size: 0.7rem;
-            opacity: 0.1;
-            pointer-events: none;
-        }
+    .center-text p {
+      font-size: 1.5rem;
+      color: #ffffffaa;
+      margin-top: 20px;
+      animation: slideUp 2s ease forwards;
+    }
 
-        @media (max-width: 600px) {
-            h1 { font-size: 2.2rem; }
-            p { font-size: 1rem; }
-        }
-    </style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes pulse {
+      0% { text-shadow: 0 0 10px #ff416c66, 0 0 20px #ff4b2b66; }
+      50% { text-shadow: 0 0 20px #ff416caa, 0 0 30px #ff4b2baa; }
+      100% { text-shadow: 0 0 10px #ff416c66, 0 0 20px #ff4b2b66; }
+    }
+
+    @keyframes slideUp {
+      0% { transform: translateY(40px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    /* Button */
+    .button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 30px;
+      border-radius: 50px;
+      background: linear-gradient(90deg, #ff4b2b, #ff416c);
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #ff416c, 0 0 30px #ff4b2b;
+    }
+
+    @media (max-width: 600px) {
+      .center-text h1 {
+        font-size: 2.5rem;
+      }
+      .center-text p {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-    <div class="stars"></div>
+  <div class="stars"></div>
+  <div class="stars2"></div>
+  <div class="stars3"></div>
 
-    <div class="card">
-        <h1>Welcome to the Legendary Zone 🚀</h1>
-        <p>Dream big. Build bigger. Explore the stars. ✨</p>
-        <a href="#!" class="button">Join the Adventure</a>
-    </div>
-
-    <div class="secret">
-        Danny Loves Zach 💖
-    </div>
+  <div class="center-text">
+    <h1>Danny Loves Zach 💖</h1>
+    <p>The legendary love story written in the stars. 🌌</p>
+    <a href="#!" class="button">Join the Journey</a>
+  </div>
 
 </body>
 </html>
