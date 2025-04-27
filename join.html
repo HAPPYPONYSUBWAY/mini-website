@@ -3,55 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Join Us - Danny Loves Zach</title>
+  <title>Join the Adventure - Danny Loves Zach</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #ff512f, #f09819);
+      background: linear-gradient(135deg, #ff4b2b, #ff416c);
       color: white;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      height: 100vh;
-      text-align: center;
+      align-items: center;
       padding: 20px;
+      text-align: center;
     }
 
-    h1 {
-      margin-bottom: 20px;
-      font-size: 3rem;
+    form {
+      background: rgba(255,255,255,0.1);
+      padding: 30px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+      max-width: 400px;
     }
 
-    p {
+    input, textarea {
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+    }
+
+    button {
+      background: #ffffff;
+      color: #ff416c;
+      border: none;
+      padding: 10px;
       font-size: 1.2rem;
-      max-width: 600px;
-    }
-
-    a {
-      margin-top: 30px;
-      display: inline-block;
-      color: white;
-      background: #1f4037;
-      padding: 10px 20px;
       border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
     }
 
-    a:hover {
-      background: #99f2c8;
-      color: black;
+    button:hover {
+      background: #ffe0e0;
     }
   </style>
 </head>
 <body>
 
-  <h1>Join the Adventure 🚀</h1>
-  <p>Want to be part of something legendary? We're building a universe of stories, laughs, and unforgettable moments. Join the movement and make history with us!</p>
+  <h1>Join the Legendary Adventure 🚀</h1>
 
-  <a href="index.html">← Back to Home</a>
+  <form action="https://formspree.io/f/yourFormIdHere" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Tell us why you love this!" required></textarea>
+    <button type="submit">Submit</button>
+  </form>
 
 </body>
 </html>
