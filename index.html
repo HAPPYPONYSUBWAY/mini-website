@@ -3,28 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Legendary Website</title>
+    <title>Legendary Website</title>
     <style>
-        body {
+        /* Basic Setup */
+        html, body {
             margin: 0;
             padding: 0;
-            height: 100vh;
-            background: linear-gradient(135deg, #1d2b64, #f8cdda);
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            height: 100%;
             font-family: 'Poppins', sans-serif;
-            color: #fff;
-            text-align: center;
             overflow: hidden;
+            background: linear-gradient(135deg, #000428, #004e92);
+            color: white;
+            text-align: center;
         }
 
+        /* Particle background */
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            box-shadow: 
+                100px 200px white,
+                150px 300px white,
+                300px 400px white,
+                500px 600px white,
+                700px 800px white,
+                900px 100px white,
+                1200px 400px white,
+                1300px 300px white,
+                1400px 600px white,
+                1600px 500px white;
+            animation: moveStars 100s linear infinite;
+            z-index: 0;
+        }
+
+        @keyframes moveStars {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(-2000px); }
+        }
+
+        /* Card Styling */
         .card {
+            position: relative;
+            z-index: 1;
             background: rgba(255, 255, 255, 0.1);
             padding: 40px 30px;
             border-radius: 20px;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(15px);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+            margin: auto;
+            margin-top: 10vh;
+            width: 90%;
+            max-width: 600px;
             animation: float 6s ease-in-out infinite;
         }
 
@@ -40,43 +71,55 @@
 
         a.button {
             display: inline-block;
-            padding: 12px 25px;
-            background: #ff7eb3;
+            padding: 12px 30px;
+            background: #ff416c;
+            background: linear-gradient(to right, #ff4b2b, #ff416c);
             color: white;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
-            transition: background 0.3s ease;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
         }
 
         a.button:hover {
-            background: #ff65a3;
+            box-shadow: 0 0 20px #ff4b2b, 0 0 30px #ff416c;
+            transform: scale(1.05);
         }
 
         @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-15px);
-            }
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        /* Hidden Secret */
+        .secret {
+            position: absolute;
+            bottom: 5px;
+            right: 10px;
+            font-size: 0.7rem;
+            opacity: 0.1;
+            pointer-events: none;
         }
 
         @media (max-width: 600px) {
-            h1 {
-                font-size: 2.2rem;
-            }
-            p {
-                font-size: 1rem;
-            }
+            h1 { font-size: 2.2rem; }
+            p { font-size: 1rem; }
         }
     </style>
 </head>
 <body>
+
+    <div class="stars"></div>
+
     <div class="card">
         <h1>Welcome to the Legendary Zone 🚀</h1>
-        <p>Dream big. Build bigger. This is just the beginning. ✨</p>
+        <p>Dream big. Build bigger. Explore the stars. ✨</p>
         <a href="#!" class="button">Join the Adventure</a>
     </div>
+
+    <div class="secret">
+        Danny Loves Zach 💖
+    </div>
+
 </body>
 </html>
